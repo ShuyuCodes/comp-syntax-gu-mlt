@@ -1,0 +1,364 @@
+# sent_id = zh-s1
+# original_text = 我只是一个穿着泥鞋的男孩。
+1	我	_	PRON	_	_	6	nsubj	_	_
+2	只是	_	ADV	_	_	6	advmod	_	_
+3	一个	_	DET	_	_	6	det	_	_
+4	穿着	_	VERB	_	_	5	acl	_	_
+5	泥鞋	_	NOUN	_	_	6	nmod	_	_
+6	男孩	_	NOUN	_	_	0	root	_	_
+7	。	_	PUNCT	_	_	6	punct	_	_
+
+# sent_id = zh-s2
+# original_text = 可行性研究估计，乘客乘坐缆车过河大约需要四分钟。
+1	可行性	_	NOUN	_	_	3	compound	_	_
+2	研究	_	NOUN	_	_	3	compound	_	_
+3	估计	_	VERB	_	_	0	root	_	_
+4	乘客	_	NOUN	_	_	5	nsubj	_	_
+5	乘坐	_	VERB	_	_	9	acl	_	_
+6	缆车	_	NOUN	_	_	5	obj	_	_
+7	过河	_	VERB	_	_	5	acl	_	_
+8	大约	_	ADV	_	_	9	advmod	_	_
+9	需要	_	VERB	_	_	3	ccomp	_	_
+10	四	_	NUM	_	_	11	nummod	_	_
+11	分钟	_	NOUN	_	_	9	obj	_	_
+12	。	_	PUNCT	_	_	3	punct	_	_
+
+# sent_id = zh-s3
+# original_text = 他们是谁？
+1	他们	_	PRON	_	_	3	nsubj	_	_
+2	是	_	AUX	_	_	3	cop	_	_
+3	谁	_	PRON	_	_	0	root	_	_
+4	？	_	PUNCT	_	_	3	punct	_	_
+
+# sent_id = zh-s4
+# original_text = 一座有两个宣礼塔的小镇滑过眼前。
+1	一座	_	NUM	_	_	3	det	_	_
+2	有	_	VERB	_	_	3	acl	_	_
+3	小镇	_	NOUN	_	_	6	nsubj	_	_
+4	两个	_	NUM	_	_	5	nummod	_	_
+5	宣礼塔	_	NOUN	_	_	2	obj	_	_
+6	滑过	_	VERB	_	_	0	root	_	_
+7	眼前	_	NOUN	_	_	6	obl	_	_
+8	。	_	PUNCT	_	_	6	punct	_	_
+
+# sent_id = zh-s5
+# original_text = 深圳交警选择了非常规处罚手段。
+1	深圳	_	PROPN	_	_	4	compound	_	_
+2	交警	_	NOUN	_	_	4	nsubj	_	_
+3	选择	_	VERB	_	_	4	acl	_	_
+4	处罚	_	NOUN	_	_	6	obj	_	_
+5	非常规	_	ADJ	_	_	6	amod	_	_
+6	手段	_	NOUN	_	_	0	root	_	_
+7	。	_	PUNCT	_	_	6	punct	_	_
+
+# sent_id = zh-s6
+# original_text = 火山研究被称为火山学，有时也拼写成vulcanology。
+1	火山	_	PROPN	_	_	2	compound	_	_
+2	研究	_	NOUN	_	_	6	nsubj:pass	_	_
+3	被	_	AUX	_	_	6	aux:pass	_	_
+4	称为	_	VERB	_	_	6	acl	_	_
+5	火山学	_	NOUN	_	_	6	obj	_	_
+6	是	_	VERB	_	_	0	root	_	_
+7	，	_	PUNCT	_	_	6	punct	_	_
+8	有时	_	ADV	_	_	10	advmod	_	_
+9	也	_	ADV	_	_	10	advmod	_	_
+10	拼写	_	VERB	_	_	6	conj	_	_
+11	vulcanology	_	PROPN	_	_	10	obj	_	_
+12	。	_	PUNCT	_	_	6	punct	_	_
+
+# sent_id = zh-s7
+# original_text = 这项研究在墨西哥海岸附近，从四月持续到六月进行。
+1	这项	_	DET	_	_	2	det	_	_
+2	研究	_	NOUN	_	_	11	nsubj	_	_
+3	在	_	ADP	_	_	6	case	_	_
+4	墨西哥	_	PROPN	_	_	6	compound	_	_
+5	海岸	_	NOUN	_	_	6	nmod	_	_
+6	附近	_	NOUN	_	_	11	obl	_	_
+7	，	_	PUNCT	_	_	11	punct	_	_
+8	从	_	ADP	_	_	10	case	_	_
+9	四月	_	PROPN	_	_	10	compound	_	_
+10	六月	_	PROPN	_	_	11	obl	_	_
+11	进行	_	VERB	_	_	0	root	_	_
+12	。	_	PUNCT	_	_	11	punct	_	_
+
+# sent_id = zh-s8
+# original_text = 她的声音真正传遍了全世界，”莱夫说。
+1	她	_	PRON	_	_	2	nmod:poss	_	_
+2	声音	_	NOUN	_	_	5	nsubj	_	_
+3	真正	_	ADV	_	_	5	advmod	_	_
+4	传遍	_	VERB	_	_	5	aux	_	_
+5	全世界	_	NOUN	_	_	8	ccomp	_	_
+6	，	_	PUNCT	_	_	5	punct	_	_
+7	莱夫	_	PROPN	_	_	8	nsubj	_	_
+8	说	_	VERB	_	_	0	root	_	_
+9	。	_	PUNCT	_	_	8	punct	_	_
+
+# sent_id = zh-s9
+# original_text = 一名证人告诉警方，受害人在四月攻击了嫌疑人。
+1	一名	_	NUM	_	_	2	det	_	_
+2	证人	_	NOUN	_	_	3	nsubj	_	_
+3	告诉	_	VERB	_	_	0	root	_	_
+4	警方	_	NOUN	_	_	3	obj	_	_
+5	，	_	PUNCT	_	_	3	punct	_	_
+6	受害人	_	NOUN	_	_	9	nsubj	_	_
+7	在	_	ADP	_	_	9	case	_	_
+8	四月	_	PROPN	_	_	7	nmod	_	_
+9	攻击	_	VERB	_	_	3	ccomp	_	_
+10	嫌疑人	_	NOUN	_	_	9	obj	_	_
+11	。	_	PUNCT	_	_	3	punct	_	_
+
+# sent_id = zh-s10
+# original_text = 最明显的时候，是当一个名人的名字起初非常罕见。
+1	最	_	ADV	_	_	4	advmod	_	_
+2	明显	_	ADJ	_	_	4	amod	_	_
+3	的	_	PART	_	_	4	mark	_	_
+4	时候	_	NOUN	_	_	0	root	_	_
+5	是	_	VERB	_	_	4	cop	_	_
+6	当	_	SCONJ	_	_	9	mark	_	_
+7	一个	_	NUM	_	_	9	det	_	_
+8	名人	_	NOUN	_	_	9	compound	_	_
+9	名字	_	NOUN	_	_	4	obl	_	_
+10	起初	_	ADV	_	_	12	advmod	_	_
+11	非常	_	ADV	_	_	12	advmod	_	_
+12	罕见	_	ADJ	_	_	9	advcl	_	_
+13	。	_	PUNCT	_	_	4	punct	_	_
+
+# sent_id = zh-s11
+# original_text = 这并没有阻止投资者蜂拥把钱投入这些基金。
+1	这	_	DET	_	_	4	nsubj	_	_
+2	并	_	ADV	_	_	4	advmod	_	_
+3	没有	_	VERB	_	_	4	aux	_	_
+4	阻止	_	VERB	_	_	0	root	_	_
+5	投资者	_	NOUN	_	_	6	nsubj	_	_
+6	蜂拥	_	VERB	_	_	4	xcomp	_	_
+7	把	_	ADP	_	_	9	mark	_	_
+8	钱	_	NOUN	_	_	9	obj	_	_
+9	投入	_	VERB	_	_	6	xcomp	_	_
+10	这些	_	DET	_	_	11	det	_	_
+11	基金	_	NOUN	_	_	9	obj	_	_
+12	。	_	PUNCT	_	_	4	punct	_	_
+
+# sent_id = zh-s12
+# original_text = 经济数据和政治言辞之间的这种不一致是熟悉的，或者说应该是这样。
+1	经济	_	ADJ	_	_	2	amod	_	_
+2	数据	_	NOUN	_	_	6	nsubj	_	_
+3	和	_	CCONJ	_	_	5	cc	_	_
+4	政治	_	ADJ	_	_	5	amod	_	_
+5	言辞	_	NOUN	_	_	2	conj	_	_
+6	之间	_	ADP	_	_	9	case	_	_
+7	这种	_	DET	_	_	9	det	_	_
+8	不一致	_	NOUN	_	_	2	nmod	_	_
+9	是	_	VERB	_	_	0	root	_	_
+10	熟悉	_	ADJ	_	_	9	xcomp	_	_
+11	，	_	PUNCT	_	_	9	punct	_	_
+12	或者	_	CCONJ	_	_	15	cc	_	_
+13	说	_	VERB	_	_	15	aux	_	_
+14	应该	_	AUX	_	_	15	aux	_	_
+15	是	_	VERB	_	_	9	conj	_	_
+16	这样	_	ADV	_	_	15	advmod	_	_
+17	。	_	PUNCT	_	_	9	punct	_	_
+
+# sent_id = zh-s13
+# original_text = 他收集卡片，并与其他男孩交换它们。
+1	他	_	PRON	_	_	2	nsubj	_	_
+2	收集	_	VERB	_	_	0	root	_	_
+3	卡片	_	NOUN	_	_	2	obj	_	_
+4	，	_	PUNCT	_	_	2	punct	_	_
+5	并	_	CCONJ	_	_	6	cc	_	_
+6	交换	_	VERB	_	_	2	conj	_	_
+7	它们	_	PRON	_	_	6	obj	_	_
+8	与	_	ADP	_	_	10	case	_	_
+9	其他	_	DET	_	_	10	amod	_	_
+10	男孩	_	NOUN	_	_	6	obl	_	_
+11	。	_	PUNCT	_	_	2	punct	_	_
+
+# sent_id = zh-s14
+# original_text = 该罪行将被判处五年监禁。
+1	该	_	DET	_	_	2	det	_	_
+2	罪行	_	NOUN	_	_	5	nsubj	_	_
+3	将	_	AUX	_	_	5	aux	_	_
+4	被	_	AUX	_	_	5	aux:pass	_	_
+5	判处	_	VERB	_	_	0	root	_	_
+6	五年	_	NUM	_	_	7	nummod	_	_
+7	监禁	_	NOUN	_	_	5	obj	_	_
+8	。	_	PUNCT	_	_	5	punct	_	_
+
+# sent_id = zh-s15
+# original_text = 这一消息被传到了全省的每一个村庄。
+1	这	_	DET	_	_	2	det	_	_
+2	一	_	NUM	_	_	3	nummod	_	_
+3	消息	_	NOUN	_	_	6	nsubj:pass	_	_
+4	被	_	AUX	_	_	6	aux:pass	_	_
+5	传到	_	VERB	_	_	6	compound	_	_
+6	了	_	PART	_	_	0	root	_	_
+7	全省	_	NOUN	_	_	9	nmod	_	_
+8	的	_	PART	_	_	7	case	_	_
+9	每一个	_	DET	_	_	10	det	_	_
+10	村庄	_	NOUN	_	_	6	obl	_	_
+11	。	_	PUNCT	_	_	6	punct	_	_
+
+# sent_id = zh-s16
+# original_text = 我把这些想法藏在脑海深处。
+1	我	_	PRON	_	_	2	nsubj	_	_
+2	藏	_	VERB	_	_	0	root	_	_
+3	把	_	ADP	_	_	5	case	_	_
+4	这些	_	DET	_	_	5	det	_	_
+5	想法	_	NOUN	_	_	2	obj	_	_
+6	在	_	ADP	_	_	9	case	_	_
+7	脑海	_	NOUN	_	_	9	compound	_	_
+8	深处	_	NOUN	_	_	6	obl	_	_
+9	。	_	PUNCT	_	_	2	punct	_	_
+
+# sent_id = zh-s17
+# original_text = 亚当本可以进入永恒的生命中。
+1	亚当	_	PROPN	_	_	5	nsubj:pass	_	_
+2	本	_	AUX	_	_	5	aux	_	_
+3	可以	_	AUX	_	_	5	aux	_	_
+4	被	_	AUX	_	_	5	aux:pass	_	_
+5	带入	_	VERB	_	_	0	root	_	_
+6	永恒	_	ADJ	_	_	7	amod	_	_
+7	生命	_	NOUN	_	_	5	obj	_	_
+8	中	_	ADP	_	_	7	case	_	_
+9	。	_	PUNCT	_	_	5	punct	_	_
+
+# sent_id = zh-s18
+# original_text = 外壳已经腐烂，并且不得不更换。
+1	外壳	_	NOUN	_	_	3	nsubj	_	_
+2	已经	_	ADV	_	_	3	advmod	_	_
+3	腐烂	_	VERB	_	_	0	root	_	_
+4	，	_	PUNCT	_	_	3	punct	_	_
+5	并且	_	CCONJ	_	_	6	cc	_	_
+6	不得不	_	AUX	_	_	7	aux	_	_
+7	更换	_	VERB	_	_	3	conj	_	_
+8	。	_	PUNCT	_	_	3	punct	_	_
+
+# sent_id = zh-s19
+# original_text = 她被激怒了，因为这个小丫头竟敢在全班同学面前愚弄她。
+1	她	_	PRON	_	_	3	nsubj:pass	_	_
+2	被	_	AUX	_	_	3	aux:pass	_	_
+3	激怒	_	VERB	_	_	0	root	_	_
+4	了	_	PART	_	_	3	aux	_	_
+5	，	_	PUNCT	_	_	3	punct	_	_
+6	因为	_	SCONJ	_	_	16	mark	_	_
+7	这个	_	DET	_	_	8	det	_	_
+8	丫头	_	NOUN	_	_	16	nsubj	_	_
+9	小	_	ADJ	_	_	8	amod	_	_
+10	竟然	_	ADV	_	_	16	advmod	_	_
+11	敢	_	AUX	_	_	16	aux	_	_
+12	在	_	ADP	_	_	15	case	_	_
+13	全班	_	NOUN	_	_	15	compound	_	_
+14	同学	_	NOUN	_	_	15	compound	_	_
+15	面前	_	NOUN	_	_	16	obl	_	_
+16	愚弄	_	VERB	_	_	3	advcl	_	_
+17	她	_	PRON	_	_	16	obj	_	_
+18	。	_	PUNCT	_	_	3	punct	_	_
+
+# sent_id = zh-s20
+# original_text = 他在选举人团的大胜掩盖了只基于43%普选票的胜利之微弱。
+1	他	_	PRON	_	_	5	nmod:poss	_	_
+2	在	_	ADP	_	_	4	case	_	_
+3	选举人	_	PROPN	_	_	4	compound	_	_
+4	团	_	NOUN	_	_	5	nmod	_	_
+5	大胜	_	NOUN	_	_	6	nsubj	_	_
+6	掩盖	_	VERB	_	_	0	root	_	_
+7	了	_	PART	_	_	6	aux	_	_
+8	只	_	ADV	_	_	11	advmod	_	_
+9	基于	_	VERB	_	_	11	acl	_	_
+10	43%	_	NUM	_	_	11	nummod	_	_
+11	普选票	_	NOUN	_	_	6	obj	_	_
+12	的	_	PART	_	_	11	case	_	_
+13	胜利	_	NOUN	_	_	11	nmod	_	_
+14	之	_	PART	_	_	13	case	_	_
+15	微弱	_	NOUN	_	_	6	obl	_	_
+16	。	_	PUNCT	_	_	6	punct	_	_
+
+# sent_id = zh-s21
+# original_text = 美国部队现在在急救包中携带阿托品和自动注射器，以备有机磷神经毒剂中毒之需。
+1	美国	_	PROPN	_	_	2	compound	_	_
+2	部队	_	NOUN	_	_	6	nsubj	_	_
+3	现在	_	ADV	_	_	6	advmod	_	_
+4	在	_	ADP	_	_	5	case	_	_
+5	急救包	_	NOUN	_	_	6	obl	_	_
+6	携带	_	VERB	_	_	0	root	_	_
+7	阿托品	_	NOUN	_	_	6	obj	_	_
+8	和	_	CCONJ	_	_	9	cc	_	_
+9	自动注射器	_	NOUN	_	_	6	conj	_	_
+10	，	_	PUNCT	_	_	6	punct	_	_
+11	以备	_	VERB	_	_	6	advcl	_	_
+12	有机磷	_	ADJ	_	_	13	compound	_	_
+13	神经毒剂	_	NOUN	_	_	14	nmod	_	_
+14	中毒	_	NOUN	_	_	11	obj	_	_
+15	之	_	PART	_	_	14	case	_	_
+16	需	_	NOUN	_	_	11	obl	_	_
+17	。	_	PUNCT	_	_	6	punct	_	_
+
+# sent_id = zh-s22
+# original_text = 他最终也许可以靠计谋达成那些无法靠武力和暴力在短期内完成的事情。
+1	他	_	PRON	_	_	5	nsubj	_	_
+2	最终	_	ADV	_	_	5	advmod	_	_
+3	也许	_	ADV	_	_	5	advmod	_	_
+4	可以	_	AUX	_	_	5	aux	_	_
+5	达成	_	VERB	_	_	0	root	_	_
+6	靠	_	ADP	_	_	7	case	_	_
+7	计谋	_	NOUN	_	_	5	obl	_	_
+8	那些	_	DET	_	_	9	det	_	_
+9	事情	_	NOUN	_	_	5	obj	_	_
+10	无法	_	AUX	_	_	18	aux	_	_
+11	靠	_	ADP	_	_	12	case	_	_
+12	武力	_	NOUN	_	_	18	obl	_	_
+13	和	_	CCONJ	_	_	14	cc	_	_
+14	暴力	_	NOUN	_	_	12	conj	_	_
+15	在	_	ADP	_	_	17	case	_	_
+16	短期	_	NOUN	_	_	17	compound	_	_
+17	内	_	NOUN	_	_	18	obl	_	_
+18	完成	_	VERB	_	_	9	acl	_	_
+19	的	_	PART	_	_	18	case	_	_
+20	。	_	PUNCT	_	_	5	punct	_	_
+
+# sent_id = en-s23
+# original_text = it has been said that only a hierarchical society with a leisure class at the top can produce works of art .
+1	it	_	PRON	_	_	4	expl	_	_
+2	has	_	AUX	_	_	4	aux	_	_
+3	been	_	AUX	_	_	4	aux:pass	_	_
+4	said	_	VERB	_	_	0	root	_	_
+5	that	_	SCONJ	_	_	18	mark	_	_
+6	only	_	ADV	_	_	8	advmod	_	_
+7	a	_	DET	_	_	8	det	_	_
+8	hierarchical	_	ADJ	_	_	9	amod	_	_
+9	society	_	NOUN	_	_	18	nsubj	_	_
+10	with	_	ADP	_	_	13	case	_	_
+11	a	_	DET	_	_	13	det	_	_
+12	leisure	_	NOUN	_	_	13	compound	_	_
+13	class	_	NOUN	_	_	9	nmod	_	_
+14	at	_	ADP	_	_	16	case	_	_
+15	the	_	DET	_	_	16	det	_	_
+16	top	_	NOUN	_	_	13	nmod	_	_
+17	can	_	AUX	_	_	18	aux	_	_
+18	produce	_	VERB	_	_	4	ccomp	_	_
+19	works	_	NOUN	_	_	18	obj	_	_
+20	of	_	ADP	_	_	21	case	_	_
+21	art	_	NOUN	_	_	19	nmod	_	_
+22	.	_	PUNCT	_	_	4	punct	_	_
+
+# sent_id = zh-s24
+# text = 他天真的解释是：如果他不认为主教在里面，他就不会烧教堂。
+1	他	_	PRON	_	_	3	nmod:poss	_	_
+2	天真	_	ADJ	_	_	3	amod	_	_
+3	解释	_	NOUN	_	_	0	root	_	_
+4	是	_	AUX	_	_	3	cop	_	_
+5	：	_	PUNCT	_	_	3	punct	_	_
+6	如果	_	SCONJ	_	_	10	mark	_	_
+7	他	_	PRON	_	_	10	nsubj	_	_
+8	不	_	ADV	_	_	10	advmod	_	_
+9	认为	_	VERB	_	_	10	advcl	_	_
+10	主教	_	NOUN	_	_	13	nsubj	_	_
+11	在	_	ADP	_	_	13	case	_	_
+12	里面	_	NOUN	_	_	13	obl	_	_
+13	，	_	PUNCT	_	_	17	punct	_	_
+14	他	_	PRON	_	_	17	nsubj	_	_
+15	就	_	ADV	_	_	17	advmod	_	_
+16	不会	_	AUX	_	_	17	aux	_	_
+17	烧	_	VERB	_	_	3	ccomp	_	_
+18	教堂	_	NOUN	_	_	17	obj	_	_
+19	。	_	PUNCT	_	_	3	punct	_	_
+

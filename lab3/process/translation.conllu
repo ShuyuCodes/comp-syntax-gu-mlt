@@ -1,0 +1,359 @@
+# sent_id = zh-s1
+# 我只是一个穿着泥鞋的男孩。
+1	我	PRON	6	nsubj
+2	只是	ADV	6	advmod
+3	一个	DET	6	det
+4	穿着	VERB	5	acl
+5	泥鞋	NOUN	6	nmod
+6	男孩	NOUN	0	root
+7	。	PUNCT	6	punct
+
+# sent_id = zh-s2
+# 可行性研究估计，乘客乘坐缆车过河大约需要四分钟。
+1	可行性	NOUN	3	compound
+2	研究	NOUN	3	compound
+3	估计	VERB	0	root
+4	乘客	NOUN	5	nsubj
+5	乘坐	VERB	9	acl
+6	缆车	NOUN	5	obj
+7	过河	VERB	5	acl
+8	大约	ADV	9	advmod
+9	需要	VERB	3	ccomp
+10	四	NUM	11	nummod
+11	分钟	NOUN	9	obj
+12	。	PUNCT	3	punct
+
+# sent_id = zh-s3
+# 他们是谁？
+1	他们	PRON	3	nsubj
+2	是	AUX	3	cop
+3	谁	PRON	0	root
+4	？	PUNCT	3	punct
+
+# sent_id = zh-s4
+# 一座有两个宣礼塔的小镇滑过眼前。
+1	一座	NUM	3	det
+2	有	VERB	3	acl
+3	小镇	NOUN	6	nsubj
+4	两个	NUM	5	nummod
+5	宣礼塔	NOUN	2	obj
+6	滑过	VERB	0	root
+7	眼前	NOUN	6	obl
+8	。	PUNCT	6	punct
+
+# sent_id = zh-s5
+# 深圳交警选择了非常规处罚手段。
+1	深圳	PROPN	4	compound
+2	交警	NOUN	4	nsubj
+3	选择	VERB	4	acl
+4	处罚	NOUN	6	obj
+5	非常规	ADJ	6	amod
+6	手段	NOUN	0	root
+7	。	PUNCT	6	punct
+
+# sent_id = zh-s6
+# 火山研究被称为火山学，有时也拼写成vulcanology。
+1	火山	PROPN	2	compound
+2	研究	NOUN	6	nsubj:pass
+3	被	AUX	6	aux:pass
+4	称为	VERB	6	acl
+5	火山学	NOUN	6	obj
+6	是	VERB	0	root
+7	，	PUNCT	6	punct
+8	有时	ADV	10	advmod
+9	也	ADV	10	advmod
+10	拼写	VERB	6	conj
+11	vulcanology	PROPN	10	obj
+12	。	PUNCT	6	punct
+
+# sent_id = zh-s7
+# 这项研究在墨西哥海岸附近，从四月持续到六月进行。
+1	这项	DET	2	det
+2	研究	NOUN	11	nsubj
+3	在	ADP	6	case
+4	墨西哥	PROPN	6	compound
+5	海岸	NOUN	6	nmod
+6	附近	NOUN	11	obl
+7	，	PUNCT	11	punct
+8	从	ADP	10	case
+9	四月	PROPN	10	compound
+10	六月	PROPN	11	obl
+11	进行	VERB	0	root
+12	。	PUNCT	11	punct
+
+# sent_id = zh-s8
+# 她的声音真正传遍了全世界，”莱夫说。
+1	她	PRON	2	nmod:poss
+2	声音	NOUN	5	nsubj
+3	真正	ADV	5	advmod
+4	传遍	VERB	5	aux
+5	全世界	NOUN	0	root
+6	，	PUNCT	5	punct
+7	莱夫	PROPN	8	nsubj
+8	说	VERB	0	root
+9	。	PUNCT	8	punct
+
+# sent_id = zh-s9
+# 一名证人告诉警方，受害人在四月攻击了嫌疑人。
+1	一名	NUM	2	det
+2	证人	NOUN	3	nsubj
+3	告诉	VERB	0	root
+4	警方	NOUN	3	obj
+5	，	PUNCT	3	punct
+6	受害人	NOUN	9	nsubj
+7	在	ADP	9	case
+8	四月	PROPN	7	nmod
+9	攻击	VERB	3	ccomp
+10	嫌疑人	NOUN	9	obj
+11	。	PUNCT	3	punct
+
+# sent_id = zh-s10
+# 最明显的时候，是当一个名人的名字起初非常罕见。
+1	最	ADV	4	advmod
+2	明显	ADJ	4	amod
+3	的	PART	4	mark
+4	时候	NOUN	0	root
+5	是	VERB	4	cop
+6	当	SCONJ	9	mark
+7	一个	NUM	9	det
+8	名人	NOUN	9	compound
+9	名字	NOUN	4	obl
+10	起初	ADV	12	advmod
+11	非常	ADV	12	advmod
+12	罕见	ADJ	9	advcl
+13	。	PUNCT	4	punct
+
+# sent_id = zh-s11
+# 这并没有阻止投资者蜂拥把钱投入这些基金。
+1	这	DET	4	nsubj
+2	并	ADV	4	advmod
+3	没有	VERB	4	neg
+4	阻止	VERB	0	root
+5	投资者	NOUN	6	nsubj
+6	蜂拥	VERB	4	xcomp
+7	把	ADP	9	mark
+8	钱	NOUN	9	obj
+9	投入	VERB	6	xcomp
+10	这些	DET	11	det
+11	基金	NOUN	9	obj
+12	。	PUNCT	4	punct
+
+# sent_id = zh-s12
+# 经济数据和政治言辞之间的这种不一致是熟悉的，或者说应该是这样。
+1	经济	ADJ	2	amod
+2	数据	NOUN	6	nsubj
+3	和	CCONJ	5	cc
+4	政治	ADJ	5	amod
+5	言辞	NOUN	2	conj
+6	之间	ADP	9	case
+7	这种	DET	9	det
+8	不一致	NOUN	2	nmod
+9	是	VERB	0	root
+10	熟悉	ADJ	9	xcomp
+11	，	PUNCT	9	punct
+12	或者	CCONJ	15	cc
+13	说	VERB	15	aux
+14	应该	AUX	15	aux
+15	是	VERB	9	conj
+16	这样	ADV	15	advmod
+17	。	PUNCT	9	punct
+
+# sent_id = zh-s13
+# 他收集卡片，并与其他男孩交换它们。
+1	他	PRON	2	nsubj
+2	收集	VERB	0	root
+3	卡片	NOUN	2	obj
+4	，	PUNCT	2	punct
+5	并	CCONJ	6	cc
+6	交换	VERB	2	conj
+7	它们	PRON	6	obj
+8	与	ADP	10	case
+9	其他	DET	10	amod
+10	男孩	NOUN	6	obl
+11	。	PUNCT	2	punct
+
+# sent_id = zh-s14
+# 该罪行将被判处五年监禁。
+1	该	DET	2	det
+2	罪行	NOUN	5	nsubj
+3	将	AUX	5	aux
+4	被	AUX	5	aux:pass
+5	判处	VERB	0	root
+6	五年	NUM	7	nummod
+7	监禁	NOUN	5	obj
+8	。	PUNCT	5	punct
+
+# sent_id = zh-s15
+# 这一消息被传到了全省的每一个村庄。
+1	这	DET	2	det
+2	一	NUM	3	nummod
+3	消息	NOUN	6	nsubj:pass
+4	被	AUX	6	aux:pass
+5	传到	VERB	6	compound
+6	了	PART	0	root
+7	全省	NOUN	9	nmod
+8	的	PART	7	case
+9	每一个	DET	10	det
+10	村庄	NOUN	6	obl
+11	。	PUNCT	6	punct
+
+# sent_id = zh-s16
+# 我把这些想法藏在脑海深处。
+1	我	PRON	2	nsubj
+2	藏	VERB	0	root
+3	把	ADP	5	case
+4	这些	DET	5	det
+5	想法	NOUN	2	obj
+6	在	ADP	9	case
+7	脑海	NOUN	9	compound
+8	深处	NOUN	6	obl
+9	。	PUNCT	2	punct
+
+# sent_id = zh-s17
+# 亚当本可以进入永恒的生命中。
+1	亚当	PROPN	5	nsubj:pass
+2	本	AUX	5	aux
+3	可以	AUX	5	aux
+4	被	AUX	5	aux:pass
+5	带入	VERB	0	root
+6	永恒	ADJ	7	amod
+7	生命	NOUN	5	obj
+8	中	ADP	7	case
+9	。	PUNCT	5	punct
+
+# sent_id = zh-s18
+# 外壳已经腐烂，并且不得不更换。
+1	外壳	NOUN	3	nsubj
+2	已经	ADV	3	advmod
+3	腐烂	VERB	0	root
+4	，	PUNCT	3	punct
+5	并且	CCONJ	6	cc
+6	不得不	AUX	7	aux
+7	更换	VERB	3	conj
+8	。	PUNCT	3	punct
+
+# sent_id = zh-s19
+# 她被激怒了，因为这个小丫头竟敢在全班同学面前愚弄她。
+1	她	PRON	3	nsubj:pass
+2	被	AUX	3	aux:pass
+3	激怒	VERB	0	root
+4	了	PART	3	aux
+5	，	PUNCT	3	punct
+6	因为	SCONJ	13	mark
+7	这个	DET	8	det
+8	丫头	NOUN	13	nsubj
+9	小	ADJ	8	amod
+10	竟然	ADV	13	advmod
+11	敢	AUX	13	aux
+12	在	ADP	15	case
+13	全班	NOUN	15	compound
+14	同学	NOUN	15	compound
+15	面前	NOUN	13	obl
+16	愚弄	VERB	3	ccomp
+17	她	PRON	16	obj
+18	。	PUNCT	3	punct
+
+# sent_id = zh-s20
+# 他在选举人团的大胜掩盖了只基于43%普选票的胜利之微弱。
+1	他	PRON	3	nsubj
+2	在	ADP	5	case
+3	选举人	PROPN	5	compound
+4	团	NOUN	5	compound
+5	大胜	NOUN	3	obl
+6	掩盖	VERB	0	root
+7	了	PART	6	aux
+8	只	ADV	11	advmod
+9	基于	VERB	11	acl
+10	43%	NUM	11	nummod
+11	普选票	NOUN	6	obj
+12	的	PART	11	case
+13	胜利	NOUN	11	nmod
+14	之	PART	13	case
+15	微弱	NOUN	6	obl
+16	。	PUNCT	6	punct
+
+# sent_id = zh-s21
+# 美国部队现在在急救包中携带阿托品和自动注射器，以备有机磷神经毒剂中毒之需。
+1	美国	PROPN	2	compound
+2	部队	NOUN	6	nsubj
+3	现在	ADV	6	advmod
+4	在	ADP	5	case
+5	急救包	NOUN	6	obl
+6	携带	VERB	0	root
+7	阿托品	NOUN	6	obj
+8	和	CCONJ	9	cc
+9	自动注射器	NOUN	6	conj
+10	，	PUNCT	6	punct
+11	以备	VERB	6	advcl
+12	有机磷	ADJ	13	compound
+13	神经毒剂	NOUN	14	nmod
+14	中毒	NOUN	11	obj
+15	之	PART	14	case
+16	需	NOUN	11	obl
+17	。	PUNCT	6	punct
+
+# sent_id = zh-s22
+# 他最终也许可以靠计谋达成那些无法靠武力和暴力在短期内完成的事情。
+1	他	PRON	5	nsubj
+2	最终	ADV	5	advmod
+3	也许	ADV	5	advmod
+4	可以	AUX	5	aux
+5	达成	VERB	0	root
+6	靠	ADP	7	case
+7	计谋	NOUN	5	obl
+8	那些	DET	9	det
+9	事情	NOUN	5	obj
+10	无法	AUX	12	advmod
+11	靠	ADP	12	case
+12	武力	NOUN	10	obl
+13	和	CCONJ	14	cc
+14	暴力	NOUN	12	conj
+15	在	ADP	17	case
+16	短期	NOUN	17	compound
+17	内	NOUN	12	obl
+18	完成	VERB	9	acl
+19	的	PART	18	case
+20	。	PUNCT	5	punct
+
+# sent_id = zh-s23
+# 据说，只有一个顶层有闲阶层的等级社会才能创作艺术作品。
+1	据说	VERB	0	root
+2	，	PUNCT	1	punct
+3	只有	ADV	9	advmod
+4	一个	DET	6	det
+5	顶层	NOUN	6	compound
+6	有	NOUN	7	acl
+7	闲阶层	NOUN	6	obj
+8	的	PART	9	case
+9	等级社会	NOUN	13	nsubj
+10	才能	AUX	13	aux
+11	创作	VERB	13	acl
+12	艺术	ADJ	13	amod
+13	作品	NOUN	1	ccomp
+14	。	PUNCT	1	punct
+
+# sent_id = zh-s24
+# 他天真的解释是：如果他不认为主教在里面，他就不会烧教堂。
+1	他	PRON	3	nmod:poss
+2	天真	ADJ	3	amod
+3	解释	NOUN	5	nsubj
+4	是	AUX	5	cop
+5	：	PUNCT	0	punct
+6	如果	SCONJ	10	mark
+7	他	PRON	10	nsubj
+8	不	ADV	10	advmod
+9	认为	VERB	10	aux
+10	主教	NOUN	13	nsubj
+11	在	ADP	13	case
+12	里面	NOUN	11	obl
+13	，	PUNCT	10	punct
+14	他	PRON	16	nsubj
+15	就	ADV	16	advmod
+16	不会	AUX	17	aux
+17	烧	VERB	5	ccomp
+18	教堂	NOUN	17	obj
+19	。	PUNCT	17	punct
+
+
+
+

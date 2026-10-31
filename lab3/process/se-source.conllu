@@ -1,0 +1,545 @@
+# sent_id = sv-s1
+# Jag tycker att du ska börja med en språkkurs.
+1	Jag	PRON	2	nsubj
+2	tycker	VERB	0	root
+3	att	SCONJ	6	mark
+4	du	PRON	6	nsubj
+5	ska	AUX	6	aux
+6	börja	VERB	2	ccomp
+7	med	ADP	9	case
+8	en	DET	9	det
+9	språkkurs	NOUN	6	obl
+10	.	PUNCT	2	punct
+
+# sent_id = sv-s2
+# Flerspråkighet gynnar oss även på arbetsmarknaden.
+1	Flerspråkighet	NOUN	2	nsubj
+2	gynnar	VERB	0	root
+3	oss	PRON	2	obj
+4	även	ADV	2	advmod
+5	på	ADP	6	case
+6	arbetsmarknaden	NOUN	2	obl
+7	.	PUNCT	2	punct
+
+# sent_id = sv-s3
+# Språket är lätt och jag kan läsa utan något problem.
+1	Språket	NOUN	2	nsubj
+2	är	AUX	0	root
+3	lätt	ADJ	2	xcomp
+4	och	CCONJ	6	cc
+5	jag	PRON	6	nsubj
+6	kan	AUX	7	aux
+7	läsa	VERB	2	conj
+8	utan	ADP	10	case
+9	något	DET	10	det
+10	problem	NOUN	7	obl
+11	.	PUNCT	2	punct
+
+# sent_id = sv-s4
+# Man känner sig ensam när man inte kan prata språket bra.
+1	Man	PRON	2	nsubj
+2	känner	VERB	0	root
+3	sig	PRON	2	obj
+4	ensam	ADJ	2	xcomp
+5	när	SCONJ	9	mark
+6	man	PRON	9	nsubj
+7	inte	PART	9	advmod
+8	kan	AUX	9	aux
+9	prata	VERB	4	advcl
+10	språket	NOUN	9	obj
+11	bra	ADV	9	advmod
+12	.	PUNCT	2	punct
+
+# sent_id = sv-s5
+# Det kan vara kroppsspråk men främst sker det genom talet.
+1	Det	PRON	3	nsubj
+2	kan	AUX	3	aux
+3	vara	AUX	0	root
+4	kroppsspråk	NOUN	3	xcomp
+5	men	CCONJ	6	cc
+6	främst	ADV	7	advmod
+7	sker	VERB	3	conj
+8	det	PRON	7	nsubj
+9	genom	ADP	10	case
+10	talet	NOUN	7	obl
+11	.	PUNCT	3	punct
+
+# sent_id = sv-s6
+# Språket är nyckeln till alla låsta dörrar, har vi hört flera gånger.
+1	Språket	NOUN	2	nsubj
+2	är	AUX	0	root
+3	nyckeln	NOUN	2	xcomp
+4	till	ADP	7	case
+5	alla	DET	7	det
+6	låsta	ADJ	7	amod
+7	dörrar	NOUN	3	nmod
+8	,	PUNCT	2	punct
+9	har	AUX	10	aux
+10	vi	PRON	11	nsubj
+11	hört	VERB	2	conj
+12	flera	ADJ	13	amod
+13	gånger	NOUN	11	obl
+14	.	PUNCT	2	punct
+
+# sent_id = sv-s7
+# Att kunna ett språk är en av de viktigaste och värdefullaste egenskaper en människa kan ha, så det är värt mer än vad man tror.
+1	Att	PART	2	mark
+2	kunna	VERB	0	root
+3	ett	DET	4	det
+4	språk	NOUN	2	obj
+5	är	AUX	2	cop
+6	en	DET	7	det
+7	av	ADP	9	case
+8	de	DET	9	det
+9	viktigaste	ADJ	11	amod
+10	och	CCONJ	11	cc
+11	värdefullaste	ADJ	12	amod
+12	egenskaper	NOUN	7	obl
+13	en	DET	14	det
+14	människa	NOUN	12	nmod
+15	kan	AUX	16	aux
+16	ha	VERB	12	acl
+17	,	PUNCT	2	punct
+18	så	SCONJ	22	mark
+19	det	PRON	22	nsubj
+20	är	AUX	22	cop
+21	värt	ADJ	22	xcomp
+22	mer	ADV	2	conj
+23	än	ADP	25	case
+24	vad	PRON	25	obj
+25	man	PRON	26	nsubj
+26	tror	VERB	22	advcl
+27	.	PUNCT	2	punct
+
+# sent_id = sv-s8
+# Med andra ord, språket är nyckeln till alla låsta dörrar, men det finns viktigare saker att satsa på som jag kommer att nämna längre ner.
+1	Med	ADP	3	case
+2	andra	ADJ	3	amod
+3	ord	NOUN	9	obl
+4	,	PUNCT	3	punct
+5	språket	NOUN	6	nsubj
+6	är	AUX	9	conj
+7	nyckeln	NOUN	6	xcomp
+8	till	ADP	11	case
+9	alla	DET	11	det
+10	låsta	ADJ	11	amod
+11	dörrar	NOUN	7	nmod
+12	,	PUNCT	9	punct
+13	men	CCONJ	14	cc
+14	det	PRON	15	nsubj
+15	finns	VERB	6	conj
+16	viktigare	ADJ	17	amod
+17	saker	NOUN	15	obj
+18	att	PART	19	mark
+19	satsa	VERB	17	acl
+20	på	ADP	19	obl
+21	som	PRON	24	obj
+22	jag	PRON	24	nsubj
+23	kommer	AUX	24	aux
+24	att	VERB	19	acl:relcl
+25	nämna	VERB	24	xcomp
+26	längre	ADV	25	advmod
+27	ner	ADV	25	advmod
+28	.	PUNCT	6	punct
+
+# sent_id = sv-s9
+# Han kom till Sverige för 4 år sedan, han kunde inte tala svenska språket, ingen engelska, han kunde i princip inte kommunicera med någon här.
+1	Han	PRON	2	nsubj
+2	kom	VERB	0	root
+3	till	ADP	4	case
+4	Sverige	PROPN	2	obl
+5	för	ADP	7	case
+6	4	NUM	7	nummod
+7	år	NOUN	2	obl
+8	sedan	ADV	7	advmod
+9	,	PUNCT	2	punct
+10	han	PRON	11	nsubj
+11	kunde	AUX	12	aux
+12	inte	PART	13	advmod
+13	tala	VERB	2	conj
+14	svenska	ADJ	15	amod
+15	språket	NOUN	13	obj
+16	,	PUNCT	13	punct
+17	ingen	DET	18	det
+18	engelska	NOUN	13	conj
+19	,	PUNCT	13	punct
+20	han	PRON	21	nsubj
+21	kunde	AUX	25	aux
+22	i	ADP	23	case
+23	princip	NOUN	21	obl
+24	inte	PART	25	advmod
+25	kommunicera	VERB	2	conj
+26	med	ADP	27	case
+27	någon	PRON	25	obl
+28	här	ADV	25	advmod
+29	.	PUNCT	2	punct
+
+# sent_id = sv-s10
+# För det första hänger språket ihop med tillhörighet, särskilt för de nya invandrare som har bestämt sig för att flytta och bosätta sig i Sverige.
+1	För	ADP	4	case
+2	det	DET	3	det
+3 första	ADJ	4	amod
+4	hänger	VERB	0	root
+5	språket	NOUN	4	nsubj
+6	ihop	ADV	4	advmod
+7	med	ADP	8	case
+8	tillhörighet	NOUN	4	obl
+9	,	PUNCT	4	punct
+10	särskilt	ADV	4	advmod
+11	för	ADP	14	case
+12	de	DET	13	det
+13	nya	ADJ	14	amod
+14	invandrare	NOUN	4	obl
+15	som	PRON	17	nsubj
+16	har	AUX	17	aux
+17	bestämt	VERB	14	acl:relcl
+18	sig	PRON	17	obj
+19	för	ADP	20	mark
+20	att	PART	21	mark
+21	flytta	VERB	17	xcomp
+22	och	CCONJ	23	cc
+23	bosätta	VERB	21	conj
+24	sig	PRON	23	obj
+25	i	ADP	26	case
+26	Sverige	PROPN	23	obl
+27	.	PUNCT	4	punct
+
+# sent_id = sv-s11
+# Om alla hade talat samma språk hade det förmodligen inte funnits något utanförskap, utan man hade fått en typ av gemenskap där man delar samma kultur.
+1	Om	SCONJ	4	mark
+2	alla	PRON	4	nsubj
+3	hade	AUX	4	aux
+4	talat	VERB	18	advcl
+5	samma	DET	6	det
+6	språk	NOUN	4	obj
+7	hade	AUX	8	aux
+8	det	PRON	9	expl
+9	förmodligen	ADV	10	advmod
+10	inte	PART	11	advmod
+11	funnits	VERB	4	conj
+12	något	DET	13	det
+13	utanförskap	NOUN	11	nsubj
+14	,	PUNCT	11	punct
+15	utan	CCONJ	18	cc
+16	man	PRON	18	nsubj
+17	hade	AUX	18	aux
+18	fått	VERB	4	conj
+19	en	DET	20	det
+20	typ	NOUN	18	obj
+21	av	ADP	22	case
+22	gemenskap	NOUN	20	nmod
+23	där	ADV	24	advmod
+24	man	PRON	25	nsubj
+25	delar	VERB	22	acl
+26	samma	DET	27	det
+27	kultur	NOUN	25	obj
+28	.	PUNCT	4	punct
+
+# sent_id = sv-s12
+# Att lära sig ett språk är väldigt svårt, speciellt för vuxna människor, och eftersom majoritetsspråket blir en viktig del i en persons liv räcker det inte att tala det på söndagar utan det måste läras in som ett modersmål, vilket finansieras av oss skattebetalare.
+1	Att	PART	2	mark
+2	lära	VERB	0	root
+3	sig	PRON	2	obj
+4	ett	DET	5	det
+5	språk	NOUN	2	obj
+6	är	AUX	2	cop
+7	väldigt	ADV	8	advmod
+8	svårt	ADJ	2	xcomp
+9	,	PUNCT	2	punct
+10	speciellt	ADV	2	advmod
+11	för	ADP	13	case
+12	vuxna	ADJ	13	amod
+13	människor	NOUN	10	obl
+14	,	PUNCT	13	punct
+15	och	CCONJ	2	cc
+16	eftersom	SCONJ	17	mark
+17	majoritetsspråket	NOUN	18	nsubj
+18	blir	VERB	2	conj
+19	en	DET	21	det
+20	viktig	ADJ	21	amod
+21	del	NOUN	18	xcomp
+22	i	ADP	24	case
+23	en	DET	24	det
+24	persons	NOUN	21	nmod
+25	liv	NOUN	24	nmod
+26	räcker	VERB	18	conj
+27	det	PRON	26	nsubj
+28	inte	PART	26	advmod
+29	att	PART	30	mark
+30	tala	VERB	26	xcomp
+31	det	PRON	30	obj
+32	på	ADP	33	case
+33	söndagar	NOUN	30	obl
+34	utan	CCONJ	26	cc
+35	det	PRON	36	nsubj
+36	måste	AUX	37	aux
+37	läras	VERB	26	conj
+38	in	PART	37	compound:prt
+39	som	SCONJ	41	mark
+40	ett	DET	41	det
+41	modersmål	NOUN	37	xcomp
+42	,	PUNCT	41	punct
+43	vilket	PRON	44	nsubj:pass
+44	finansieras	VERB	37	acl:relcl
+45	av	ADP	46	case
+46	oss	PRON	47	nmod
+47	skattebetalare	NOUN	44	obl
+48	.	PUNCT	2	punct
+
+# sent_id = sv-s13
+# Avslutningsvis så vill jag förmedla att vi bör rädda världen innan språken.
+1	Avslutningsvis	ADV	6	advmod
+2	så	ADV	6	advmod
+3	vill	AUX	4	aux
+4	jag	PRON	6	nsubj
+5	förmedla	VERB	6	xcomp
+6	att	PART	7	mark
+7	vi	PRON	8	nsubj
+8	bör	AUX	9	aux
+9	rädda	VERB	4	ccomp
+10	världen	NOUN	9	obj
+11	innan	SCONJ	12	mark
+12	språken	NOUN	9	obl
+13	.	PUNCT	6	punct
+
+# sent_id = sv-s14
+# Språket är ganska enkelt, och det är lätt att förstå vad romanen handlar om.
+1	Språket	NOUN	2	nsubj
+2	är	AUX	0	root
+3	ganska	ADV	4	advmod
+4	enkelt	ADJ	2	xcomp
+5	,	PUNCT	2	punct
+6	och	CCONJ	2	cc
+7	det	PRON	8	nsubj
+8	är	AUX	2	conj
+9	lätt	ADJ	8	xcomp
+10	att	PART	11	mark
+11	förstå	VERB	9	xcomp
+12	vad	PRON	14	obj
+13	romanen	NOUN	14	nsubj
+14	handlar	VERB	11	ccomp
+15	om	ADP	14	obl
+16	.	PUNCT	2	punct
+
+# sent_id = sv-s15
+# Det är även kostsamt för staten att se till att dessa minoritetsspråk lever kvar.
+1	Det	PRON	2	nsubj
+2	är	AUX	0	root
+3	även	ADV	2	advmod
+4	kostsamt	ADJ	2	xcomp
+5	för	ADP	6	case
+6	staten	NOUN	4	obl
+7	att	PART	8	mark
+8	se	VERB	4	xcomp
+9	till	PART	8	compound:prt
+10	att	SCONJ	12	mark
+11	dessa	DET	12	det
+12	minoritetsspråk	NOUN	8	ccomp
+13	lever	VERB	12	acl
+14	kvar	ADV	13	advmod
+15	.	PUNCT	2	punct
+
+# sent_id = sv-s16
+# Låt mig säga att det är inte för sent att rädda de små språken, vi måste ta steget nu.
+1	Låt	VERB	0	root
+2	mig	PRON	1	obj
+3	säga	VERB	1	xcomp
+4	att	SCONJ	6	mark
+5	det	PRON	6	nsubj
+6	är	AUX	3	ccomp
+7	inte	PART	6	advmod
+8	för	ADP	9	case
+9	sent	ADJ	6	xcomp
+10	att	PART	11	mark
+11	rädda	VERB	9	xcomp
+12	de	DET	13	det
+13	små	ADJ	14	amod
+14	språken	NOUN	11	obj
+15	,	PUNCT	1	punct
+16	vi	PRON	17	nsubj
+17	måste	AUX	1	conj
+18	ta	VERB	17	xcomp
+19	steget	NOUN	18	obj
+20	nu	ADV	18	advmod
+21	.	PUNCT	1	punct
+
+# sent_id = sv-s17
+# Att hålla dessa minoritetsspråk vid liv är både slöseri med tid och mycket ekonomiskt krävande.
+1	Att	PART	2	mark
+2	hålla	VERB	0	root
+3	dessa	DET	4	det
+4	minoritetsspråk	NOUN	2	obj
+5	vid	ADP	6	case
+6	liv	NOUN	2	obl
+7	är	AUX	2	cop
+8	både	CCONJ	10	cc
+9	slöseri	NOUN	2	xcomp
+10	med	ADP	11	case
+11	tid	NOUN	9	nmod
+12	och	CCONJ	13	cc
+13	mycket	ADV	14	advmod
+14	ekonomiskt	ADJ	15	amod
+15	krävande	ADJ	9	conj
+16	.	PUNCT	2	punct
+
+# sent_id = sv-s18
+# Jag tackar alla lärare på Sfi som hjälper oss för att vi ska kunna bli bättre på svenska språket.
+1	Jag	PRON	2	nsubj
+2	tackar	VERB	0	root
+3	alla	DET	4	det
+4	lärare	NOUN	2	obj
+5	på	ADP	6	case
+6	Sfi	PROPN	4	nmod
+7	som	PRON	8	nsubj
+8	hjälper	VERB	4	acl:relcl
+9	oss	PRON	8	obj
+10	för	ADP	11	mark
+11	att	SCONJ	13	mark
+12	vi	PRON	13	nsubj
+13	ska	AUX	14	aux
+14	kunna	AUX	15	aux
+15	bli	VERB	8	advcl
+16	bättre	ADJ	15	xcomp
+17	på	ADP	19	case
+18	svenska	ADJ	19	amod
+19	språket	NOUN	16	obl
+20	.	PUNCT	2	punct
+
+# sent_id = sv-s19
+# Språk skapades för flera tusen år sedan och vissa språk har tynat bort medan några nya har skapats.
+1	Språk	NOUN	2	nsubj:pass
+2	skapades	VERB	0	root
+3	för	ADP	6	case
+4	flera	DET	6	det
+5	tusen	NUM	6	compound
+6	år	NOUN	2	obl
+7	sedan	ADV	6	advmod
+8	och	CCONJ	2	cc
+9	vissa	DET	10	det
+10	språk	NOUN	11	nsubj
+11	har	AUX	12	aux
+12	tynat	VERB	2	conj
+13	bort	ADV	12	compound:prt
+14	medan	SCONJ	16	mark
+15	några	DET	16	det
+16	nya	ADJ	17	amod
+17	har	AUX	18	aux
+18	skapats	VERB	12	conj
+19	.	PUNCT	2	punct
+
+# sent_id = sv-s20
+# Samhället behöver flerspråkiga och vägen till kommunikation och till att begripa andras kulturer är ett språk.
+1	Samhället	NOUN	2	nsubj
+2	behöver	VERB	0	root
+3	flerspråkiga	ADJ	2	obj
+4	och	CCONJ	2	cc
+5	vägen	NOUN	2	conj
+6	till	ADP	7	case
+7	kommunikation	NOUN	5	nmod
+8	och	CCONJ	9	cc
+9	till	ADP	11	case
+10	att	PART	11	mark
+11	begripa	VERB	7	conj
+12	andras	DET	13	det
+13	kulturer	NOUN	11	obj
+14	är	AUX	5	cop
+15	ett	DET	16	det
+16	språk	NOUN	5	xcomp
+17	.	PUNCT	2	punct
+
+# sent_id = sv-s21
+# Om man kan fler språk har man fler möjligheter att använda sig av dem vilket leder till utveckling.
+1	Om	SCONJ	5	mark
+2	man	PRON	3	nsubj
+3	kan	AUX	5	aux
+4	fler	DET	5	det
+5	språk	NOUN	10	advcl
+6	har	AUX	7	aux
+7	man	PRON	10	nsubj
+8	fler	DET	9	det
+9	möjligheter	NOUN	10	obj
+10	att	PART	11	mark
+11	använda	VERB	5	ccomp
+12	sig	PRON	11	obj
+13	av	ADP	14	case
+14	dem	PRON	11	obl
+15	vilket	PRON	16	nsubj
+16	leder	VERB	5	acl:relcl
+17	till	ADP	18	case
+18	utveckling	NOUN	16	obl
+19	.	PUNCT	5	punct
+
+# sent_id = sv-s22
+# Därför tycker jag att vi bör införa ett förbud mot främmande språk i statliga myndigheter och föreningar.
+1	Därför	ADV	2	advmod
+2	tycker	VERB	0	root
+3	jag	PRON	2	nsubj
+4	att	SCONJ	7	mark
+5	vi	PRON	7	nsubj
+6	bör	AUX	7	aux
+7	införa	VERB	2	ccomp
+8	ett	DET	9	det
+9	förbud	NOUN	7	obj
+10	mot	ADP	12	case
+11	främmande	ADJ	12	amod
+12	språk	NOUN	9	nmod
+13	i	ADP	15	case
+14	statliga	ADJ	15	amod
+15	myndigheter	NOUN	12	nmod
+16	och	CCONJ	17	cc
+17	föreningar	NOUN	15	conj
+18	.	PUNCT	2	punct
+
+# sent_id = sv-s23
+# Men jag anser först och främst att språket är som själen, det som ger oss livskraft, säregenhet och karaktär.
+1	Men	CCONJ	2	cc
+2	jag	PRON	3	nsubj
+3	anser	VERB	0	root
+4	först	ADV	3	advmod
+5	och	CCONJ	6	cc
+6	främst	ADV	4	conj
+7	att	SCONJ	9	mark
+8	språket	NOUN	9	nsubj
+9	är	AUX	3	ccomp
+10	som	SCONJ	11	mark
+11	själen	NOUN	9	xcomp
+12	,	PUNCT	9	punct
+13	det	PRON	14	nsubj
+14	som	SCONJ	15	mark
+15	ger	VERB	11	acl:relcl
+16	oss	PRON	15	iobj
+17	livskraft	NOUN	15	obj
+18	,	PUNCT	17	punct
+19	säre­genhet	NOUN	17	conj
+20	och	CCONJ	21	cc
+21	karaktär	NOUN	17	conj
+22	.	PUNCT	3	punct
+
+# sent_id = sv-s24
+# På Sveriges riksdags hemsida kan man läsa om hur Sverige bidrar med att skydda dessa språk med hjälp av statligt bidrag.
+1	På	ADP	4	case
+2	Sveriges	PROPN	3	nmod:poss
+3	riksdags	NOUN	4	compound
+4	hemsida	NOUN	6	obl
+5	kan	AUX	6	aux
+6	man	PRON	0	root
+7	läsa	VERB	6	xcomp
+8	om	ADP	9	case
+9	hur	SCONJ	10	mark
+10	Sverige	PROPN	11	nsubj
+11	bidrar	VERB	7	obl
+12	med	ADP	13	case
+13	att	PART	14	mark
+14	skydda	VERB	11	obl
+15	dessa	DET	16	det
+16	språk	NOUN	14	obj
+17	med	ADP	18	case
+18	hjälp	NOUN	14	obl
+19	av	ADP	21	case
+20	statligt	ADJ	21	amod
+21	bidrag	NOUN	18	nmod
+22	.	PUNCT	6	punct
+
+
+
+
