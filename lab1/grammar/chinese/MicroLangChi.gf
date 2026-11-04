@@ -58,10 +58,10 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
       
     UsePron p = p ;
             
-    a_Det = {s = pre {"a"|"e"|"i"|"o" => "an" ; _ => "a"} ; n = Sg} ; --- a/an can get wrong
+    a_Det = {s = "" ; n = Sg} ; 
     aPl_Det = {s = "" ; n = Pl} ;
-    the_Det = {s = "the" ; n = Sg} ;
-    thePl_Det = {s = "the" ; n = Pl} ;
+    the_Det = {s = "" ; n = Sg} ;
+    thePl_Det = {s = "" ; n = Pl} ;
     
     UseN n = n ;
     
@@ -78,15 +78,15 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     with_Prep = {s = "with"} ;
 
     he_Pron = {
-      s = table {Nom => "he" ; Acc => "him"} ;
+      s = table {Nom => "他" ; Acc => "他"} ;
       a = Agr Sg ;
       } ;
     she_Pron = {
-      s = table {Nom => "she" ; Acc => "her"} ;
+      s = table {Nom => "她" ; Acc => "她"} ;
       a = Agr Sg ;
       } ;
     they_Pron = {
-      s = table {Nom => "they" ; Acc => "them"} ;
+      s = table {Nom => "他们" ; Acc => "他们"} ;
       a = Agr Pl ;
       } ;
 
