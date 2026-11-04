@@ -28,7 +28,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     UttNP np = {s = np.s ! Acc} ;
 
     PredVPS np vp = {
-      s = np.s ! Nom ++ vp.verb.s ! agr2vform np.a ++ vp.compl
+      s = np.s ! Nom ++ vp.verb.s ++ vp.compl
       } ;
       
     UseV v = {
@@ -110,8 +110,8 @@ lin boat_N = mkN "船" ; -- boat
 lin book_N = mkN "书" ; -- book
 lin boy_N = mkN "男孩" ; -- boy
 lin bread_N = mkN "面包" ; -- bread
-lin break_V2 = mkV2 (mkV "打破" "打破" "打破") ; -- break, broke, broken
-lin buy_V2 = mkV2 (mkV "买" "买" "买") ; -- buy, bought, bought
+lin break_V2 = mkV2 (mkV "打破") ; -- break, broke, broken
+lin buy_V2 = mkV2 (mkV "买") ; -- buy, bought, bought
 lin car_N = mkN "汽车" ; -- car
 lin cat_N = mkN "猫" ; -- cat
 lin child_N = mkN "孩子" ; -- child, children
@@ -120,21 +120,21 @@ lin clean_A = mkA "干净" ; -- clean
 lin clever_A = mkA "聪明" ; -- clever
 lin cloud_N = mkN "云" ; -- cloud
 lin cold_A = mkA "冷" ; -- cold
-lin come_V = mkV "来" "来" "来" ; -- come, came, come
+lin come_V = mkV "来" ; -- come, came, come
 lin computer_N = mkN "电脑" ; -- computer
 lin cow_N = mkN "奶牛" ; -- cow
 lin dirty_A = mkA "脏" ; -- dirty
 lin dog_N = mkN "狗" ; -- dog
-lin drink_V2 = mkV2 (mkV "喝" "喝" "喝") ; -- drink, drank, drunk
-lin eat_V2 = mkV2 (mkV "吃" "吃" "吃") ; -- eat, ate, eaten
-lin find_V2 = mkV2 (mkV "找到" "找到" "找到") ; -- find, found, found
+lin drink_V2 = mkV2 (mkV "喝") ; -- drink, drank, drunk
+lin eat_V2 = mkV2 (mkV "吃") ; -- eat, ate, eaten
+lin find_V2 = mkV2 (mkV "找到") ; -- find, found, found
 lin fire_N = mkN "火" ; -- fire
 lin fish_N = mkN "鱼" ; -- fish, fish
 lin flower_N = mkN "花" ; -- flower
 lin friend_N = mkN "朋友" ; -- friend
 lin girl_N = mkN "女孩" ; -- girl
 lin good_A = mkA "好" ; -- good
-lin go_V = mkV "去" "去" "去" ; -- go, went, gone
+lin go_V = mkV "去"; -- go, went, gone
 lin grammar_N = mkN "语法" ; -- grammar
 lin green_A = mkA "绿" ; -- green
 lin heavy_A = mkA "重" ; -- heavy
@@ -156,23 +156,23 @@ lin now_Adv = mkAdv "现在" ; -- now
 lin old_A = mkA "老" ; -- old
 -- lin paris_PN = mkPN "Paris" ;
 lin play_V = mkV "玩" ; -- play
-lin read_V2 = mkV2 (mkV "读" "读" "读") ; -- read, read, read
+lin read_V2 = mkV2 (mkV "读") ; -- read, read, read
 lin ready_A = mkA "准备好" ; -- ready
 lin red_A = mkA "红" ; -- red
 lin river_N = mkN "河流" ; -- river
-lin run_V = mkV "跑" "跑" "跑" ; -- run, ran, run
+lin run_V = mkV "跑"; -- run, ran, run
 lin sea_N = mkN "海" ; -- sea
-lin see_V2 = mkV2 (mkV "看见" "看见" "看见") ; -- see, saw, seen
+lin see_V2 = mkV2 (mkV "看见") ; -- see, saw, seen
 lin ship_N = mkN "船" ; -- ship
-lin sleep_V = mkV "睡觉" "睡觉" "睡觉" ; -- sleep, slept, slept
+lin sleep_V = mkV "睡觉" ; -- sleep, slept, slept
 lin small_A = mkA "小" ; -- small
 lin star_N = mkN "星星" ; -- star
-lin swim_V = mkV "游泳" "游泳" "游泳" ; -- swim, swam, swum
-lin teach_V2 = mkV2 (mkV "教" "教" "教") ; -- teach, taught, taught
+lin swim_V = mkV "游泳" ; -- swim, swam, swum
+lin teach_V2 = mkV2 (mkV "教") ; -- teach, taught, taught
 lin train_N = mkN "火车" ; -- train
 lin travel_V = mkV "旅行" ; -- travel
 lin tree_N = mkN "树" ; -- tree
-lin understand_V2 = mkV2 (mkV "理解" "理解" "理解") ; -- understand, understood, understood
+lin understand_V2 = mkV2 (mkV "理解") ; -- understand, understood, understood
 lin wait_V2 = mkV2 "等待" ; -- wait for
 lin walk_V = mkV "走路" ; -- walk
 lin warm_A = mkA "温暖" ; -- warm
@@ -195,18 +195,13 @@ oper
   mkA : Str -> A
     = \s -> lin A {s = s} ;
 
-  mkV = overload {
-    mkV : (inf : Str) -> V  -- predictable verb, e.g. play-plays, cry-cries, wash-washes
-      = \s -> lin V (smartVerb s) ;
-    mkV : (inf,pres,part : Str) -> V  -- irregular verb, e.g. drink-drank-drunk
-      = \inf,pres,part -> lin V (irregVerb inf pres part) ;
-    } ;
+  mkV : Str -> V = \s -> lin V (mkVerb s) ;
 
   mkV2 = overload {
     mkV2 : Str -> V2          -- predictable verb with direct object, e.g. "wash"
-      = \s   -> lin V2 (smartVerb s ** {c = []}) ;
+      = \s   -> lin V2 (mkVerb s ** {c = []}) ;
     mkV2 : Str  -> Str -> V2  -- predictable verb with preposition, e.g. "wait - for"
-      = \s,p -> lin V2 (smartVerb s ** {c = p}) ;
+      = \s,p -> lin V2 (mkVerb s ** {c = p}) ;
     mkV2 : V -> V2            -- any verb with direct object, e.g. "drink"
       = \v   -> lin V2 (v ** {c = []}) ;
     mkV2 : V -> Str -> V2     -- any verb with preposition
