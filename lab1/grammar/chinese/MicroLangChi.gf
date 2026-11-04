@@ -52,7 +52,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
       vp ** {compl = vp.compl ++ adv.s} ;
       
     DetCN det cn = {
-      s = \\c => det.s ++ cn.s ! det.n ;
+      s = \\c => det.s ++ cn.s ;
       a = Agr det.n ;
       } ;
       
@@ -66,7 +66,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     UseN n = n ;
     
     AdjCN ap cn = {
-      s = table {n => ap.s ++ cn.s ! n}
+      s = ap.s ++ cn.s
       } ;
 
     PositA a = a ;
@@ -189,12 +189,8 @@ lin young_A = mkA "年轻" ; -- young
 ---------------------------
 
 oper
-  mkN = overload {
-    mkN : Str -> Noun   -- predictable noun, e.g. car-cars, boy-boys, fly-flies, bush-bushes
-      = \n -> lin N (smartNoun n) ;
-    mkN : Str -> Str -> Noun  -- irregular noun, e.g. man-men
-      = \sg,pl -> lin N (mkNoun sg pl) ;
-    } ;
+  mkN : Str -> Noun   
+      = \n -> lin N (mkNoun n) ;
 
   mkA : Str -> A
     = \s -> lin A {s = s} ;
