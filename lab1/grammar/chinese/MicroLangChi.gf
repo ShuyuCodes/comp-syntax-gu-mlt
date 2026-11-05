@@ -9,7 +9,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     Utt = {s : Str} ;
     
     S  = {s : Str} ;
-    VP = {verb : Verb ; compl : Str} ; ---s special case of Mini
+    VP = {beforeVerb : Str ; verb : Verb ; compl : Str} ; ---s special case of Mini
     Comp = {s : Str} ;
     AP = Adjective ;
     CN = Noun ;
@@ -28,20 +28,23 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     UttNP np = {s = np.s ! Acc} ;
 
     PredVPS np vp = {
-      s = np.s ! Nom ++ vp.verb.s ++ vp.compl
+      s = np.s ! Nom ++ vp.beforeVerb ++ vp.verb.s ++ vp.compl
       } ;
       
     UseV v = {
+      beforeVerb = [] ;
       verb = v ;
       compl = [] ;
       } ;
       
     ComplV2 v2 np = {
+      beforeVerb = [];
       verb = v2 ;
       compl = v2.c ++ np.s ! Acc  -- NP object in the accusative, preposition first
       } ;
       
     UseComp comp = {
+      beforeVerb = [];
       verb = mkVerb "" ;    
       compl = comp.s
       } ;
@@ -49,7 +52,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     CompAP ap = ap ;
       
     AdvVP vp adv =
-      vp ** {compl = vp.compl ++ adv.s} ;
+      vp ** {beforeVerb = vp.beforeVerb ++ adv.s} ;
       
     DetCN det cn = {
       s = \\c => det.s ++ cn.s ;
