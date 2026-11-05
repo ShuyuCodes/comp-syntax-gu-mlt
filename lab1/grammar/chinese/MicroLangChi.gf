@@ -16,7 +16,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     NP = {s : Case => Str ; a : Agreement} ;
     Pron = {s : Case => Str ; a : Agreement} ;
     Det = {s : Str ; n : Number} ;
-    Prep = {s : Str} ;
+    Prep = {beforeNP : Str ; afterNP : Str} ;
     V = Verb ;
     V2 = Verb2 ;
     A = Adjective ;
@@ -71,11 +71,11 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
 
     PositA a = a ;
 
-    PrepNP prep np = {s = prep.s ++ np.s ! Acc} ;
+    PrepNP prep np = {s = prep.beforeNP ++ np.s ! Acc ++ prep.afterNP} ;
 
-    in_Prep = {s = "in"} ;
-    on_Prep = {s = "on"} ;
-    with_Prep = {s = "with"} ;
+    in_Prep = {beforeNP = "在" ; afterNP = "里"} ;
+    on_Prep = {beforeNP = "在" ; afterNP = "上"} ;
+    with_Prep = {beforeNP = "和" ; afterNP = "一起"} ;
 
     he_Pron = {
       s = table {Nom => "他" ; Acc => "他"} ;
@@ -211,7 +211,7 @@ oper
   mkAdv : Str -> Adv
     = \s -> lin Adv {s = s} ;
   
-  mkPrep : Str -> Prep
-    = \s -> lin Prep {s = s} ;
+  mkPrep : Str -> Str -> Prep
+    = \before, after -> lin Prep {beforeNP = before ; afterNP = after} ;
 
 }
