@@ -25,6 +25,4 @@ oper
   -- two-place verb with "case" as preposition; for transitive verbs, c=[]
   Verb2 : Type = Verb ** {c : Str} ;
 
-  be_Verb : Verb = mkVerb "是" ; 
-
 }

@@ -42,7 +42,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
       } ;
       
     UseComp comp = {
-      verb = be_Verb ;     -- the verb is the copula "be"
+      verb = mkVerb "" ;    
       compl = comp.s
       } ;
       
