@@ -5,44 +5,78 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
 ---------------- Grammar part -----------------------
 -----------------------------------------------------
 
+-- lincat (Linearization Categories)
+-- Maps abstract syntax categories to concrete data types.
+
   lincat
     Utt = {s : Str} ;
     
     S  = {s : Str} ;
-    VP = {beforeVerb : Str ; verb : Verb ; compl : Str} ; ---s special case of Mini
+    -- VP consists of three components:
+    -- beforeVerb: material placed before the main verb (e.g. adverbs)
+    -- verb: the main verb
+    -- compl: the verb complement or object
+    VP = {beforeVerb : Str ; verb : Verb ; compl : Str} ; 
     Comp = {s : Str} ;
     AP = Adjective ;
     CN = Noun ;
+    -- NP stores its surface form according to Case,
+    -- together with Agreement information.
+    -- These features are retained for compatibility with
+    -- the abstract grammar, although Chinese does not normally
+    -- express them through morphological changes.
     NP = {s : Case => Str ; a : Agreement} ;
+    -- Pron stores nominative and accusative forms.
+    -- In Chinese, these forms are usually identical.
     Pron = {s : Case => Str ; a : Agreement} ;
+    -- Det stores the determiner's surface form and number information.
     Det = {s : Str ; n : Number} ;
     Prep = {beforeNP : Str ; afterNP : Str} ;
+    -- Prep allows material both before and after an NP,
+    -- e.g. 在 + NP + 里.
     V = Verb ;
     V2 = Verb2 ;
     A = Adjective ;
     N = Noun ;
     Adv = {s : Str} ;
 
+
+  -- lin (Linearization Rules)
+  -- Defines how abstract syntax functions are realized
+  -- as concrete Chinese expressions.
   lin
+    -- Converts a sentence into an utterance.
     UttS s = s ;
+    -- Converts an NP into an utterance.
     UttNP np = {s = np.s ! Acc} ;
 
+    -- Combines a subject NP and a VP to form a sentence.
+    -- Chinese basic word order:
+    -- Subject + Adverbial + Verb + Complement.
     PredVPS np vp = {
       s = np.s ! Nom ++ vp.beforeVerb ++ vp.verb.s ++ vp.compl
       } ;
-      
+    
+    -- Creates a VP from an intransitive verb.
+    -- No object or additional complement is required.
     UseV v = {
       beforeVerb = [] ;
       verb = v ;
       compl = [] ;
       } ;
-      
+    
+    -- Combines a two-place verb with its object NP.
+    -- The field c provides an optional connecting element
+    -- before the object; it is empty for direct-object verbs.
     ComplV2 v2 np = {
       beforeVerb = [];
       verb = v2 ;
-      compl = v2.c ++ np.s ! Acc  -- NP object in the accusative, preposition first
+      compl = v2.c ++ np.s ! Acc  
       } ;
-      
+
+    -- Forms a VP from a complement.
+    -- Uses an empty verb because this simplified Chinese grammar
+    -- does not insert the copula 是 in this construction.
     UseComp comp = {
       beforeVerb = [];
       verb = mkVerb "" ;    
@@ -51,35 +85,58 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
       
     CompAP ap = ap ;
       
+    -- Adds an adverb to a VP before the main verb.
+    -- Preserves the other fields of the original VP.
     AdvVP vp adv =
       vp ** {beforeVerb = vp.beforeVerb ++ adv.s} ;
       
+    -- Combines a determiner and a common noun to form an NP.
+    -- The determiner's number information is stored as Agreement.
+    -- The Case parameter is retained, but is not used to change
+    -- the surface form in this simplified Chinese grammar.
     DetCN det cn = {
       s = \\c => det.s ++ cn.s ;
       a = Agr det.n ;
       } ;
       
     UsePron p = p ;
-            
+
+    -- Defines singular and plural determiners.
+    -- Chinese does not use articles corresponding directly to
+    -- English "a" and "the", so their surface forms are empty.
+    -- Number information is retained for Agreement.        
     a_Det = {s = "" ; n = Sg} ; 
     aPl_Det = {s = "" ; n = Pl} ;
     the_Det = {s = "" ; n = Sg} ;
     thePl_Det = {s = "" ; n = Pl} ;
     
+    -- Uses a common noun directly as a common noun phrase.
     UseN n = n ;
     
+    -- Combines an adjective and a common noun.
+    -- Chinese adjectives precede the nouns they modify
+    -- in this simplified grammar.
     AdjCN ap cn = {
       s = ap.s ++ cn.s
       } ;
 
+    -- Uses the positive form of an adjective without modification.
     PositA a = a ;
 
+    -- Combines a preposition and an NP.
+    -- Places the preposition before the NP and any following
+    -- material after the NP.
     PrepNP prep np = {s = prep.beforeNP ++ np.s ! Acc ++ prep.afterNP} ;
 
+    -- Defines Chinese prepositional expressions using
+    -- material before and after the NP.
     in_Prep = {beforeNP = "在" ; afterNP = "里"} ;
     on_Prep = {beforeNP = "在" ; afterNP = "上"} ;
     with_Prep = {beforeNP = "和" ; afterNP = "一起"} ;
 
+    -- Defines the Chinese personal pronouns.
+    -- Nominative and accusative forms are identical.
+    -- Agreement information distinguishes singular and plural pronouns.
     he_Pron = {
       s = table {Nom => "他" ; Acc => "他"} ;
       a = Agr Sg ;
@@ -192,28 +249,33 @@ lin young_A = mkA "年轻" ; -- young
 ---------------------------
 
 oper
-  mkN : Str -> Noun   
+  mkN : Str -> Noun   -- Creates a noun from a string using the resource-level constructor mkNoun.
       = \n -> lin N (mkNoun n) ;
 
-  mkA : Str -> A
+  mkA : Str -> A    -- Creates an adjective with a single surface form.
     = \s -> lin A {s = s} ;
 
-  mkV : Str -> V = \s -> lin V (mkVerb s) ;
+  mkV : Str -> V = \s -> lin V (mkVerb s) ;    -- Creates a verb from a string using the resource-level constructor mkVerb.
 
+  -- Defines overloaded constructors for two-place verbs (V2).
+  -- Supports both string and existing verb inputs,
+  -- with or without an additional connecting element.
   mkV2 = overload {
-    mkV2 : Str -> V2          -- predictable verb with direct object, e.g. "wash"
-      = \s   -> lin V2 (mkVerb s ** {c = []}) ;
-    mkV2 : Str  -> Str -> V2  -- predictable verb with preposition, e.g. "wait - for"
-      = \s,p -> lin V2 (mkVerb s ** {c = p}) ;
-    mkV2 : V -> V2            -- any verb with direct object, e.g. "drink"
-      = \v   -> lin V2 (v ** {c = []}) ;
-    mkV2 : V -> Str -> V2     -- any verb with preposition
-      = \v,p -> lin V2 (v ** {c = p}) ;
+    mkV2 : Str -> V2    -- String input, no connecting element
+        = \s -> lin V2 (mkVerb s ** {c = []}) ;
+    mkV2 : Str -> Str -> V2    -- String input, with a connecting element
+        = \s,p -> lin V2 (mkVerb s ** {c = p}) ;
+    mkV2 : V -> V2    -- Existing verb input, no connecting element
+        = \v -> lin V2 (v ** {c = []}) ;
+    mkV2 : V -> Str -> V2    -- Existing verb input, with a connecting element
+        = \v,p -> lin V2 (v ** {c = p}) ;
     } ;
 
-  mkAdv : Str -> Adv
+  mkAdv : Str -> Adv    -- Creates an adverb from a string.
     = \s -> lin Adv {s = s} ;
-  
+    
+  -- Creates a preposition from two strings:
+  -- one placed before the NP and one placed after it.
   mkPrep : Str -> Str -> Prep
     = \before, after -> lin Prep {beforeNP = before ; afterNP = after} ;
 
