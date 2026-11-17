@@ -45,18 +45,22 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
   -- Defines how abstract syntax functions are realized
   -- as concrete Chinese expressions.
   lin
+
+-- Phrase
     -- Converts a sentence into an utterance.
     UttS s = s ;
     -- Converts an NP into an utterance.
     UttNP np = {s = np.s ! Acc} ;
 
+-- Sentence
     -- Combines a subject NP and a VP to form a sentence.
     -- Chinese basic word order:
     -- Subject + Adverbial + Verb + Complement.
     PredVPS np vp = {
       s = np.s ! Nom ++ vp.beforeVerb ++ vp.verb.s ++ vp.compl
       } ;
-    
+
+-- Verb 
     -- Creates a VP from an intransitive verb.
     -- No object or additional complement is required.
     UseV v = {
@@ -85,11 +89,12 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
       
     CompAP ap = ap ;
       
-    -- Adds an adverb to a VP before the main verb.
+    -- Adds an adverb to a VP before the main verb. ”已经 睡“ 而不是 “睡 已经”
     -- Preserves the other fields of the original VP.
     AdvVP vp adv =
       vp ** {beforeVerb = vp.beforeVerb ++ adv.s} ;
       
+-- Noun
     -- Combines a determiner and a common noun to form an NP.
     -- The determiner's number information is stored as Agreement.
     -- The Case parameter is retained, but is not used to change
@@ -102,13 +107,13 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     UsePron p = p ;
 
     -- Defines singular and plural determiners.
-    -- Chinese does not use articles corresponding directly to
-    -- English "a" and "the", so their surface forms are empty.
-    -- Number information is retained for Agreement.        
-    a_Det = {s = "" ; n = Sg} ; 
-    aPl_Det = {s = "" ; n = Pl} ;
-    the_Det = {s = "" ; n = Sg} ;
-    thePl_Det = {s = "" ; n = Pl} ;
+    -- Uses Chinese expressions to represent English indefinite
+    -- and definite determiners.
+    -- Number information is retained for Agreement.     
+    a_Det = {s = "一个" ; n = Sg} ;
+    aPl_Det = {s = "一些" ; n = Pl} ;
+    the_Det = {s = "这个" ; n = Sg} ;
+    thePl_Det = {s = "这些" ; n = Pl} ;
     
     -- Uses a common noun directly as a common noun phrase.
     UseN n = n ;
@@ -120,14 +125,17 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
       s = ap.s ++ cn.s
       } ;
 
+-- Adjective
     -- Uses the positive form of an adjective without modification.
     PositA a = a ;
 
+-- Adverb
     -- Combines a preposition and an NP.
     -- Places the preposition before the NP and any following
     -- material after the NP.
     PrepNP prep np = {s = prep.beforeNP ++ np.s ! Acc ++ prep.afterNP} ;
 
+-- Structural
     -- Defines Chinese prepositional expressions using
     -- material before and after the NP.
     in_Prep = {beforeNP = "在" ; afterNP = "里"} ;
