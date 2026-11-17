@@ -10,7 +10,6 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
 
   lincat
     Utt = {s : Str} ;
-    
     S  = {s : Str} ;
     -- VP consists of three components:
     -- beforeVerb: material placed before the main verb (e.g. adverbs)
@@ -20,15 +19,9 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     Comp = {s : Str} ;
     AP = Adjective ;
     CN = Noun ;
-    -- NP stores its surface form according to Case,
-    -- together with Agreement information.
-    -- These features are retained for compatibility with
-    -- the abstract grammar, although Chinese does not normally
-    -- express them through morphological changes.
-    NP = {s : Case => Str ; a : Agreement} ;
-    -- Pron stores nominative and accusative forms.
-    -- In Chinese, these forms are usually identical.
-    Pron = {s : Case => Str ; a : Agreement} ;
+    NP = {s : Str ; a : Agreement} ;
+    -- Pron stores the pronoun's surface form and agreement information.
+    Pron = {s : Str ; a : Agreement} ;
     -- Det stores the determiner's surface form and number information.
     Det = {s : Str ; n : Number} ;
     Prep = {beforeNP : Str ; afterNP : Str} ;
@@ -50,14 +43,14 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     -- Converts a sentence into an utterance.
     UttS s = s ;
     -- Converts an NP into an utterance.
-    UttNP np = {s = np.s ! Acc} ;
+    UttNP np = {s = np.s} ;
 
 -- Sentence
     -- Combines a subject NP and a VP to form a sentence.
     -- Chinese basic word order:
     -- Subject + Adverbial + Verb + Complement.
     PredVPS np vp = {
-      s = np.s ! Nom ++ vp.beforeVerb ++ vp.verb.s ++ vp.compl
+      s = np.s ++ vp.beforeVerb ++ vp.verb.s ++ vp.compl
       } ;
 
 -- Verb 
@@ -75,7 +68,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     ComplV2 v2 np = {
       beforeVerb = [];
       verb = v2 ;
-      compl = v2.c ++ np.s ! Acc  
+      compl = v2.c ++ np.s 
       } ;
 
     -- Forms a VP from a complement.
@@ -97,10 +90,9 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
 -- Noun
     -- Combines a determiner and a common noun to form an NP.
     -- The determiner's number information is stored as Agreement.
-    -- The Case parameter is retained, but is not used to change
     -- the surface form in this simplified Chinese grammar.
     DetCN det cn = {
-      s = \\c => det.s ++ cn.s ;
+      s = det.s ++ cn.s ;
       a = Agr det.n ;
       } ;
       
@@ -133,7 +125,7 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     -- Combines a preposition and an NP.
     -- Places the preposition before the NP and any following
     -- material after the NP.
-    PrepNP prep np = {s = prep.beforeNP ++ np.s ! Acc ++ prep.afterNP} ;
+    PrepNP prep np = {s = prep.beforeNP ++ np.s ++ prep.afterNP} ;
 
 -- Structural
     -- Defines Chinese prepositional expressions using
@@ -143,18 +135,17 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     with_Prep = {beforeNP = "和" ; afterNP = "一起"} ;
 
     -- Defines the Chinese personal pronouns.
-    -- Nominative and accusative forms are identical.
     -- Agreement information distinguishes singular and plural pronouns.
     he_Pron = {
-      s = table {Nom => "他" ; Acc => "他"} ;
+      s = "他" ;
       a = Agr Sg ;
       } ;
     she_Pron = {
-      s = table {Nom => "她" ; Acc => "她"} ;
+      s = "她" ;
       a = Agr Sg ;
       } ;
     they_Pron = {
-      s = table {Nom => "他们" ; Acc => "他们"} ;
+      s = "他们" ;
       a = Agr Pl ;
       } ;
 

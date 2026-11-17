@@ -15,10 +15,6 @@ resource MicroResChi = open Prelude in {
     -- but this distinction is retained for grammatical compatibility.
     Number = Sg | Pl ;
 
-    -- Case: distinguishes nominative and accusative.
-    -- Chinese pronouns usually have the same form in both cases.
-    Case = Nom | Acc ;
-
     -- Agreement: stores number agreement information.
     -- Agr Sg = singular agreement; Agr Pl = plural agreement.
     Agreement = Agr Number ;
