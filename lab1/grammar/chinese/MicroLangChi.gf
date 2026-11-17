@@ -19,9 +19,9 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     Comp = {s : Str} ;
     AP = Adjective ;
     CN = Noun ;
-    NP = {s : Str ; a : Agreement} ;
-    -- Pron stores the pronoun's surface form and agreement information.
-    Pron = {s : Str ; a : Agreement} ;
+    NP = {s : Str ; n : Number} ;
+    -- Pron stores the pronoun's surface form and number information.
+    Pron = {s : Str ; n : Number} ;
     -- Det stores the determiner's surface form and number information.
     Det = {s : Str ; n : Number} ;
     Prep = {beforeNP : Str ; afterNP : Str} ;
@@ -82,18 +82,19 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
       
     CompAP ap = ap ;
       
-    -- Adds an adverb to a VP before the main verb. ”已经 睡“ 而不是 “睡 已经”
+    -- Adds an adverb to a VP before the main verb,
+    -- e.g. 已经 睡 rather than 睡 已经.
     -- Preserves the other fields of the original VP.
     AdvVP vp adv =
       vp ** {beforeVerb = vp.beforeVerb ++ adv.s} ;
       
 -- Noun
     -- Combines a determiner and a common noun to form an NP.
-    -- The determiner's number information is stored as Agreement.
-    -- the surface form in this simplified Chinese grammar.
+    -- The determiner's number information is retained in the NP.
+    -- The surface form is formed by combining the determiner and noun.
     DetCN det cn = {
       s = det.s ++ cn.s ;
-      a = Agr det.n ;
+      n = det.n ;
       } ;
       
     UsePron p = p ;
@@ -101,7 +102,9 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     -- Defines singular and plural determiners.
     -- Uses Chinese expressions to represent English indefinite
     -- and definite determiners.
-    -- Number information is retained for Agreement.     
+
+    -- Number information is retained in the determiner
+    -- for grammatical representation.
     a_Det = {s = "一个" ; n = Sg} ;
     aPl_Det = {s = "一些" ; n = Pl} ;
     the_Det = {s = "这个" ; n = Sg} ;
@@ -135,18 +138,18 @@ concrete MicroLangChi of MicroLang = open MicroResChi, Prelude in {
     with_Prep = {beforeNP = "和" ; afterNP = "一起"} ;
 
     -- Defines the Chinese personal pronouns.
-    -- Agreement information distinguishes singular and plural pronouns.
+    -- Number information distinguishes singular and plural pronouns.
     he_Pron = {
       s = "他" ;
-      a = Agr Sg ;
+      n = Sg ;
       } ;
     she_Pron = {
       s = "她" ;
-      a = Agr Sg ;
+      n = Sg ;
       } ;
     they_Pron = {
       s = "他们" ;
-      a = Agr Pl ;
+      n = Pl ;
       } ;
 
 -----------------------------------------------------

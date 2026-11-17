@@ -15,11 +15,6 @@ resource MicroResChi = open Prelude in {
     -- but this distinction is retained for grammatical compatibility.
     Number = Sg | Pl ;
 
-    -- Agreement: stores number agreement information.
-    -- Agr Sg = singular agreement; Agr Pl = plural agreement.
-    Agreement = Agr Number ;
-
-
   -- OPERATIONS
   -- Define the data types and constructors used in the grammar.
 
